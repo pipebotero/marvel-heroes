@@ -1,0 +1,23 @@
+.simple-card {
+	min-width: 470px;
+	.character-avatar-image {
+		background-size: cover;
+	}
+	.character-image {
+		margin-top: 12px;
+	}
+	.items-container {
+		margin-top: 22px;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+}
+
+@media (max-width: 468px) {
+  .simple-card {
+		min-width: 80vw;
+    width: 80vw;
+  }
+}
+

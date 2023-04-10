@@ -1,0 +1,11 @@
+mat-card {
+    .mat-card-header {
+        .mat-card-header-text {
+            display: flex;
+            align-items: center;
+        }
+        .mat-card-title {
+            margin-bottom: 0 !important;
+        }
+    }
+}

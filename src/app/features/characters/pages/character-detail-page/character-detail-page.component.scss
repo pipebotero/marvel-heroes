@@ -1,0 +1,16 @@
+@import "src/app/styles/settings/mixins";
+
+.wrap-container {
+  @include reset-wrap-container;
+  gap: 30px;
+  padding: 20px 12px;
+  character-detail-card {
+    align-self: center;
+  }
+}
+
+@media  (max-width: 468px) {
+  .wrap-container {
+    padding: 12px 0;
+  }
+}

@@ -1,0 +1,38 @@
+<mat-card class="detail-card">
+  <mat-card-header>
+    <div
+      mat-card-avatar
+      class="character-avatar-image"
+      [style.background-image]="'url(' + image + ')'"
+    ></div>
+    <mat-card-title>{{ name }}</mat-card-title>
+  </mat-card-header>
+  <img
+    mat-card-image
+    class="character-image"
+    [src]="image"
+    [alt]="'Image of ' + name"
+  />
+  <mat-card-content>
+    <p *ngIf="description != ''; else emptyDesc">
+      {{ description }}
+    </p>
+    <ng-template #emptyDesc> <p>Empty description</p> </ng-template>
+    <div class="items-container">
+      <!-- Comics: -->
+      <ng-content select="[comics]"></ng-content>
+      <!-- Events: -->
+      <ng-content select="[events]"></ng-content>
+      <!-- Series: -->
+      <ng-content select="[series]"></ng-content>
+      <!-- Stories: -->
+      <ng-content select="[stories]"></ng-content>
+    </div>
+  </mat-card-content>
+  <!-- <mat-card-actions>
+    <button mat-button color="warn">
+      <mat-icon>favorite</mat-icon>
+      LIKE
+    </button>
+  </mat-card-actions> -->
+</mat-card>

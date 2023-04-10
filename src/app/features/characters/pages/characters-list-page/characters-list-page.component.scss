@@ -1,0 +1,24 @@
+@import "src/app/styles/settings/mixins";
+
+.wrap-container {
+  @include reset-wrap-container;
+  gap: 30px;
+  padding: 20px 12px;
+  align-items: center;
+  .search__form {
+    width: max-content;
+    align-self: center;
+  }
+  .character-link__a {
+    text-decoration: none;
+  }
+  
+}
+
+@media (max-width: 468px) {
+  .wrap-container {
+    padding: 12px 8px;
+  }
+}
+
+

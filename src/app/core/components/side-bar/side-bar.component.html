@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+    <span>MENU</span>
+  </mat-toolbar>
+<mat-selection-list #item [multiple]="false">
+    <mat-list-option *ngFor="let item of menuItems">
+      {{item}}
+    </mat-list-option>
+</mat-selection-list>
+  

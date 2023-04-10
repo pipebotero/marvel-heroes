@@ -1,0 +1,26 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <mh-side-bar [menuItems]="menuItems"></mh-side-bar>
+  </mat-drawer>
+  <mh-header>
+    <button
+      mat-icon-button
+      color="primary"
+      aria-label="Menu icon"
+      (click)="drawer.toggle()"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <a routerLink="/characters">
+      <img src="assets/icon/marvel_logo.svg" alt="" height="40">
+    </a>
+  </mh-header>
+
+  <!-- <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div> -->
+
+  <router-outlet></router-outlet>
+</mat-drawer-container>

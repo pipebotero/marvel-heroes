@@ -1,0 +1,27 @@
+<div class="wrap-container">
+  <form class="search__form" [formGroup]="searchForm" (ngSubmit)="onSubmitSearch($event)">
+    <mat-form-field appearance="legacy">
+      <mat-label>Search</mat-label>
+      <input
+        matInput
+        placeholder="Search a character"
+        formControlName="searchTerm"
+        bindQueryParam="query"
+      />
+      <button matSuffix mat-button>
+        <mat-icon matSuffix>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </form>
+  <a
+    *ngFor="let character of characters"
+    class="character-link__a"
+    [routerLink]="['/characters', character.id]"
+  >
+    <character-simple-card
+      [name]="character.name"
+      [thumbnail]="character.getThumbnail()"
+    >
+    </character-simple-card>
+  </a>
+</div>

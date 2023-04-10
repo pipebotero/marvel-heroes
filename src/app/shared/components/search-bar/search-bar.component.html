@@ -1,0 +1,15 @@
+<mat-form-field appearance="legacy">
+  <!-- <ng-content select="[searchInput]"></ng-content> -->
+  <mat-label>{{ label }}</mat-label>
+  <input
+    matInput
+    [placeholder]="placeholder"
+    [name]="search"
+    [(ngModel)]="search"
+    (ngModelChange)="modelChange($event)"
+  />
+  <button matSuffix mat-button>
+    <mat-icon matSuffix>search</mat-icon>
+  </button>
+  <!-- <mat-hint>Hint</mat-hint> -->
+</mat-form-field>

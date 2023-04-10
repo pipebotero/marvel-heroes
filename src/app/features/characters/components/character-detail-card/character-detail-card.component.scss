@@ -1,0 +1,16 @@
+.detail-card {
+  max-width: 470px;
+  .character-avatar-image {
+    background-size: cover;
+  }
+  .character-image {
+    margin-top: 12px;
+  }
+  .items-container {
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
